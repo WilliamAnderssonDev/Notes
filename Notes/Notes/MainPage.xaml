@@ -2,30 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Notes="clr-namespace:Notes"
+             BackgroundColor="#222527"
              x:Class="Notes.MainPage">
     <StackLayout Margin="10,35,10,10">
-        <Label Text="Note Keeper"
+        <Label Text="Notes"
                HorizontalOptions="Center"
                FontAttributes="Bold"
-               TextColor="Gray"
+               TextColor="#23806F"
                FontSize="40" />
 
         <BoxView HorizontalOptions="FillAndExpand"
                  WidthRequest="1"
                  HeightRequest="1.5"
-                 Color="OrangeRed" />
+                 Color="#DD6937" />
 
-        <Notes:CustomEditor x:Name="editor"
+        <Editor x:Name="editor"
                 Placeholder="Your notes will save automatically!"
                 HeightRequest="400"
-                BackgroundColor="DarkGray"
-                Keyboard="Email"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="#3c4347"
+                PlaceholderColor="LightGray"
+                TextColor="LightGray"
                 TextChanged="OnNoteChanged" />
 
         <BoxView HorizontalOptions="FillAndExpand"
                  WidthRequest="1"
                  HeightRequest="1.5"
-                 Color="OrangeRed" />
+                 Color="#DD6937" />
+        <BoxView HorizontalOptions="FillAndExpand"
+                 WidthRequest="1"
+                 HeightRequest="6"
+                 Color="Transparent" />
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -36,6 +43,7 @@
 
             <Button Grid.Column="1"
                     Text="CLEAR"
+                    BackgroundColor="#d53322"
                     Clicked="OnDeleteButtonClicked" />
         </Grid>
     </StackLayout>
